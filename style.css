@@ -344,27 +344,31 @@ code {
 .columns {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between;*/
     gap: 0.94rem;
     margin-top: 1rem;
 }
 .column {
     flex: 1 1 33%;
-    border: solid 2px black;
-    padding: 1rem;
+    border: 2px solid #000;
     border-radius: 3rem;
-    padding: 0.47rem;
-    /* margin: 0.47rem; */
+    padding: 0.92rem;
     box-sizing: border-box;
 }
+
 .columns > .column:first-child {
-    flex: 0 0 66%;
+    flex: 0 0 calc(66% - 0.47rem);
 }
 .columns > .column:last-child {
-    flex: 0 0 33%;
+    flex: 0 0 calc(34% - 0.47rem);
 }
-@media (max-width: 10rem) {
+
+@media (max-width: 768px) {
     .column {
-      flex-basis: 100%;
+        flex-basis: 100%;
+    }
+    .columns > .column:first-child,
+    .columns > .column:last-child {
+        flex-basis: 100%;
+        background-color: red;
     }
 }

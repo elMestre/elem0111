@@ -369,6 +369,5 @@ code {
     .columns > .column:first-child,
     .columns > .column:last-child {
         flex-basis: 100%;
-        background-color: red;
     }
 }

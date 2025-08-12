@@ -290,7 +290,7 @@ pre code {
 .hljs-strong {
     font-weight: bold;
 }
->
+
 /*
  * Markdown PDF CSS
  */
@@ -341,6 +341,16 @@ code {
 }
 
 
+/* CUSTOM STYLE */
+
+:root {
+    --fondo: #fff;
+    --base: #eee;
+    --contenido: #000;
+    --suave: #444;
+    --realze: orangered;
+}
+
 .columns {
     display: flex;
     flex-wrap: wrap;
@@ -349,17 +359,39 @@ code {
 }
 .column {
     flex: 1 1 33%;
-    border: 2px solid #000;
+    border: 2px solid var(--contenido);
     border-radius: 3rem;
-    padding: 0.92rem;
     box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
-
+.column h2 {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
 .columns > .column:first-child {
     flex: 0 0 calc(66% - 0.47rem);
 }
 .columns > .column:last-child {
     flex: 0 0 calc(34% - 0.47rem);
+}
+.card-header {
+    background-color: var(--suave);
+    color: var(--base);
+    padding: 0.42rem;
+}
+.card-body {
+    padding: 0.47rem;
+    background-color: var(--base);
+    flex: 1;
+}
+
+light {
+    color: var(--suave);
 }
 
 @media (max-width: 768px) {
